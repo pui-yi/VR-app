@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>sim-VR-app</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="description" content="a simple virtual reality application using 3D model in A-Frame">
+        <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+        <script src="colortoggle.js"></script>
+        <script src="rotate.js"></script>
+        <script src="anima.js"></script>
+    </head>
+    <body>
+        <a-scene cursor="rayOrigin: mouse">
+            <a-assets>
+                <img src="ground_dark.jpeg" id="ground">
+                <img src="fire.jpeg" id="fire">
+            </a-assets>
+            <a-plane src="#ground" position="0 0 -4" rotation="-90 0 0" width="9" height="9" color="#FFFFFF"></a-plane>
+            <a-sky color="skyblue"></a-sky>
+            <a-sphere  position="0 1 -10" radius="5" color="#FBCF67" color-toggle moving></a-sphere>
+            <a-cylinder position="0 0 -2" radius="0.5" height="1" src="#fire" rotate></a-cylinder>
+        </a-scene>
+    </body>
+</html>
